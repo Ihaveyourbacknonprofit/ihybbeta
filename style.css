@@ -1,100 +1,37 @@
 
 /* =========================
-   MODERN DARK MODE SYSTEM
+   DARK MODE TEXT FIX
 ========================= */
 
 body.dark {
-  background: #0d0d10;
-  color: #f5f5f5;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* GLOBAL TEXT CONTROL */
-body.dark p {
-  color: #d6d6d6;
-}
-
-body.dark span {
-  color: inherit;
-}
-
-/* HEADINGS */
-body.dark h1,
-body.dark h2,
-body.dark h3 {
+  background: #0f0f10;
   color: #ffffff;
 }
 
-/* KEEP BRAND RED ACCENT */
-body.dark .section h2,
-body.dark .card h3,
-body.dark .title {
+/* Make ALL normal text readable */
+body.dark p,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark span {
+  color: #ffffff;
+}
+
+/* Slightly softer paragraph text (better UI feel) */
+body.dark p {
+  color: #e0e0e0;
+}
+
+/* Section headings stay strong red */
+body.dark .section h2 {
   color: #ff4d4d;
 }
 
-/* HEADER */
-body.dark header {
-  background: #15151a;
-  border-bottom: 1px solid #2a2a2a;
-}
-
-/* HERO */
-body.dark .hero {
-  background: linear-gradient(to bottom, #15151a, #0d0d10);
-}
-
-/* CARDS */
-body.dark .card {
-  background: #1a1a20;
-  color: #f5f5f5;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
-}
-
+/* Cards text */
 body.dark .card p {
-  color: #cfcfcf;
+  color: #dddddd;
 }
 
-/* CONTACT BOX */
-body.dark .contact-box {
-  background: #c40000;
-  color: white;
-}
-
-/* FOOTER */
-body.dark footer {
-  color: #aaaaaa;
-  border-top: 1px solid #2a2a2a;
-}
-
-/* BUTTONS (clean contrast) */
-body.dark .btn {
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #ffffff;
-}
-
-body.dark .btn:hover {
-  background: #e6e6e6;
-}
-
-body.dark .btn-outline {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-body.dark .btn-outline:hover {
-  background: #ffffff;
-  color: #000000;
-}
-
-/* THEME BUTTON */
-body.dark .theme-toggle {
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #ffffff;
-}
-
-body.dark .theme-toggle:hover {
-  transform: scale(1.05);
+body.dark .card h3 {
+  color: #ff4d4d;
 }
