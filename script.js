@@ -1,10 +1,8 @@
 // WEBSITE LOADED
-
 console.log("I Have Your Back website loaded successfully.");
 
 
 // CARD FADE-IN ANIMATION
-
 window.addEventListener("load", () => {
 
   const cards = document.querySelectorAll(".card");
@@ -17,7 +15,6 @@ window.addEventListener("load", () => {
     setTimeout(() => {
 
       card.style.transition = "0.5s ease";
-
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
 
@@ -29,26 +26,20 @@ window.addEventListener("load", () => {
 
 
 // HEADER SHADOW ON SCROLL
-
 window.addEventListener("scroll", () => {
 
   const header = document.querySelector("header");
 
   if (window.scrollY > 10) {
-
     header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-
   } else {
-
     header.style.boxShadow = "none";
-
   }
 
 });
 
 
 // BUTTON CLICK EFFECT
-
 const buttons = document.querySelectorAll(".btn");
 
 buttons.forEach(button => {
@@ -58,11 +49,25 @@ buttons.forEach(button => {
     button.style.transform = "scale(0.96)";
 
     setTimeout(() => {
-
       button.style.transform = "";
-
     }, 120);
 
   });
 
 });
+
+
+// DARK MODE TOGGLE
+function toggleTheme() {
+
+  document.body.classList.toggle("dark");
+
+  const btn = document.querySelector(".theme-toggle");
+
+  if (document.body.classList.contains("dark")) {
+    btn.textContent = "Light Mode";
+  } else {
+    btn.textContent = "Dark Mode";
+  }
+
+}
