@@ -137,28 +137,32 @@ body.dark #loader {
   flex-wrap: wrap;
 }
 
+
 .btn {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 5px;
   background: #000;
   color: #fff;
-  padding: 14px 30px;
-  border-radius: 999px;
   text-decoration: none;
-  font-weight: bold;
+  border-radius: 999px;
   border: 2px solid #000;
   transition: 0.2s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  background: #111;
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
+/* OUTLINE BUTTON (Learn More) */
 .btn-outline {
   background: transparent;
   color: #000;
   border: 2px solid #000;
 }
 
+/* IMPORTANT: prevent hover turning it white/buggy */
 .btn-outline:hover {
   background: #000;
   color: #fff;
