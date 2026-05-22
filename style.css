@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -19,87 +19,23 @@ body {
 }
 
 /* =========================
-   LOADER
+   HEADER
 ========================= */
 
-#loader {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.spinner {
-  width: 45px;
-  height: 45px;
-  border: 4px solid #eee;
-  border-top: 4px solid #c40000;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  100% { transform: rotate(360deg); }
-}
-
-body.dark #loader {
-  background: #0d0d10;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
-  background: #fff;
+header {
+  padding: 20px;
   border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
 
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .logo-area img {
-  width: 45px;
-  height: 45px;
-}
-
-.title {
-  font-weight: bold;
-  color: #c40000;
-}
-
-.nav-links a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  color: #c40000;
-}
-
-/* =========================
-   HAMBURGER
-========================= */
-
-.hamburger {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
 }
 
 /* =========================
@@ -107,36 +43,28 @@ body.dark #loader {
 ========================= */
 
 .hero {
-  padding: 120px 8%;
+  padding: 100px 20px;
   text-align: center;
-  background: linear-gradient(to bottom, #fff, #f7f7f7);
 }
 
-.hero h1 {
-  font-size: 52px;
+.hero h2 {
   color: #c40000;
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  max-width: 750px;
-  margin: auto;
-  font-size: 20px;
   color: #444;
+  font-size: 18px;
 }
 
 /* =========================
-   BUTTONS
+   BUTTONS (BASE)
 ========================= */
 
 .hero-buttons {
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
+  margin-top: 20px;
 }
-
 
 .btn {
   display: inline-block;
@@ -155,113 +83,29 @@ body.dark #loader {
   opacity: 0.9;
 }
 
-/* OUTLINE BUTTON (Learn More) */
+/* OUTLINE BUTTON (LIGHT MODE) */
 .btn-outline {
   background: transparent;
   color: #000;
   border: 2px solid #000;
 }
 
-/* IMPORTANT: prevent hover turning it white/buggy */
 .btn-outline:hover {
   background: #000;
   color: #fff;
-}
-
-/* DONATE BUTTON */
-
-.donate-btn {
-  background: #c40000;
-  color: #fff;
-  padding: 14px 26px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s ease;
-}
-
-.donate-btn:hover {
-  transform: scale(1.05);
 }
 
 /* =========================
    SECTIONS
 ========================= */
 
-.section {
-  padding: 90px 8%;
+section {
+  padding: 60px 20px;
 }
 
-.section h2 {
-  font-size: 40px;
-  color: #c40000;
-  margin-bottom: 20px;
-}
-
-.section p {
-  font-size: 18px;
-  color: #444;
-  max-width: 800px;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 45px;
-}
-
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 18px;
-  border-top: 5px solid #c40000;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-  transition: 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  color: #c40000;
+h2 {
   margin-bottom: 10px;
-}
-
-/* =========================
-   CONTACT FORM
-========================= */
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-}
-
-.contact-form button {
-  background: #c40000;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  opacity: 0.9;
+  color: #c40000;
 }
 
 /* =========================
@@ -270,41 +114,13 @@ body.dark #loader {
 
 footer {
   text-align: center;
-  padding: 40px;
-  color: #777;
+  padding: 30px;
   border-top: 1px solid #eee;
+  color: #777;
 }
 
 /* =========================
-   THEME SWITCH
-========================= */
-
-.theme-switch {
-  cursor: pointer;
-}
-
-.switch-track {
-  width: 60px;
-  height: 30px;
-  background: #ddd;
-  border-radius: 999px;
-  position: relative;
-  transition: 0.3s ease;
-}
-
-.switch-thumb {
-  width: 24px;
-  height: 24px;
-  background: #000;
-  border-radius: 50%;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  transition: 0.3s ease;
-}
-
-/* =========================
-   DARK MODE
+   DARK MODE (FIXED PROPERLY)
 ========================= */
 
 body.dark {
@@ -312,103 +128,42 @@ body.dark {
   color: #f5f5f5;
 }
 
-body.dark .navbar {
-  background: #15151a;
+body.dark header {
   border-bottom: 1px solid #2a2a2a;
-}
-
-body.dark .nav-links a {
-  color: #fff;
 }
 
 body.dark .hero {
   background: linear-gradient(to bottom, #15151a, #0d0d10);
 }
 
+/* TEXT FIX */
 body.dark p {
   color: #d6d6d6;
 }
 
-body.dark .card {
-  background: #1a1a20;
-  color: #fff;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+body.dark h2 {
+  color: #ff4d4d;
 }
 
-body.dark .contact-form input,
-body.dark .contact-form textarea {
-  background: #1a1a20;
-  border: 1px solid #333;
-  color: #fff;
-}
-
+/* BUTTONS DARK MODE */
 body.dark .btn {
   background: #fff;
   color: #000;
+  border: 2px solid #fff;
 }
 
+body.dark .btn:hover {
+  opacity: 0.85;
+}
+
+/* IMPORTANT FIX: Learn More button */
 body.dark .btn-outline {
-  border-color: #fff;
+  background: transparent;
   color: #fff;
+  border: 2px solid #fff;
 }
 
 body.dark .btn-outline:hover {
   background: #fff;
   color: #000;
-}
-
-body.dark .theme-switch .switch-track {
-  background: #c40000;
-}
-
-body.dark .switch-thumb {
-  left: 33px;
-  background: #fff;
-}
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 8%;
-    background: #fff;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  }
-
-  .nav-links a {
-    margin: 10px 0;
-  }
-
-  body.dark .nav-links {
-    background: #15151a;
-  }
-
 }
