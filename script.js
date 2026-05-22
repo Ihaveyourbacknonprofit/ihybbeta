@@ -1,93 +1,61 @@
-// WEBSITE LOADED
-console.log("I Have Your Back website loaded successfully.");
 
+// THEME SETUP
+function toggleTheme() {
+  document.body.classList.toggle("dark");
 
-// APPLY SAVED THEME OR SYSTEM THEME
-function applyTheme(theme) {
-  if (theme === "dark") {
-    document.body.classList.add("dark");
-  } else {
-    document.body.classList.remove("dark");
-  }
-}
-
-
-// GET SAVED THEME OR SYSTEM DEFAULT
-function initTheme() {
-
-  const savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme) {
-    applyTheme(savedTheme);
-    updateButton(savedTheme);
-    return;
-  }
-
-  // system preference fallback
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  if (prefersDark) {
-    applyTheme("dark");
-    updateButton("dark");
-  } else {
-    applyTheme("light");
-    updateButton("light");
-  }
-}
-
-
-// UPDATE BUTTON TEXT
-function updateButton(theme) {
   const btn = document.querySelector(".theme-toggle");
 
-  if (!btn) return;
-
-  if (theme === "dark") {
+  if (document.body.classList.contains("dark")) {
     btn.innerHTML = "☀️ Light Mode";
+    localStorage.setItem("theme", "dark");
   } else {
     btn.innerHTML = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light");
   }
 }
 
-
-// TOGGLE THEME
-function toggleTheme() {
-
-  const isDark = document.body.classList.toggle("dark");
-
-  const theme = isDark ? "dark" : "light";
-
-  localStorage.setItem("theme", theme);
-
-  updateButton(theme);
-}
-
-
-// RUN ON LOAD
+// LOAD SAVED THEME
 window.addEventListener("load", () => {
 
-  initTheme();
+  const saved = localStorage.getItem("theme");
 
-  // CARD ANIMATION
+  if (saved === "dark") {
+    document.body.classList.add("dark");
+  }
+
+  const btn = document.querySelector(".theme-toggle");
+
+  if (btn) {
+    btn.innerHTML = document.body.classList.contains("dark")
+      ? "☀️ Light Mode"
+      : "🌙 Dark Mode";
+  }
+
+});
+
+
+// CARD ANIMATION
+window.addEventListener("load", () => {
+
   const cards = document.querySelectorAll(".card");
 
-  cards.forEach((card, index) => {
+  cards.forEach((card, i) => {
 
     card.style.opacity = "0";
-    card.style.transform = "translateY(25px)";
+    card.style.transform = "translateY(20px)";
 
     setTimeout(() => {
       card.style.transition = "0.5s ease";
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
-    }, index * 200);
+    }, i * 150);
 
   });
 
 });
 
 
-// HEADER SHADOW ON SCROLL
+// HEADER SHADOW
 window.addEventListener("scroll", () => {
 
   const header = document.querySelector("header");
