@@ -164,6 +164,46 @@ footer {
   margin-top: 60px;
 }
 
+/* THEME BUTTON */
+.theme-toggle {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* DARK MODE */
+body.dark {
+  background: #121212;
+  color: #ffffff;
+}
+
+body.dark header {
+  background: #1e1e1e;
+  border-bottom: 2px solid #333;
+}
+
+body.dark .section p {
+  color: #ddd;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark .contact-box {
+  background: #222;
+}
+
 /* MOBILE */
 
 @media (max-width: 700px) {
