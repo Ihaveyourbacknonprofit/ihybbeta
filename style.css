@@ -8,14 +8,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
   background: #ffffff;
   color: #111;
   line-height: 1.6;
-  transition: 0.3s ease;
 }
 
 /* =========================
@@ -61,7 +59,7 @@ header {
 }
 
 /* =========================
-   BUTTONS (BASE)
+   BUTTONS (SIMPLE + SAFE)
 ========================= */
 
 .hero-buttons {
@@ -85,7 +83,7 @@ header {
   opacity: 0.9;
 }
 
-/* OUTLINE BUTTON (LIGHT MODE) */
+/* OUTLINE BUTTON */
 .btn-outline {
   background: transparent;
   color: #000;
@@ -119,56 +117,4 @@ footer {
   padding: 30px;
   border-top: 1px solid #eee;
   color: #777;
-}
-
-/* =========================
-   DARK MODE (FIXED PROPERLY)
-========================= */
-
-body.dark {
-  background: #0d0d10;
-  color: #f5f5f5;
-}
-
-/* text */
-body.dark p {
-  color: #d6d6d6;
-}
-
-body.dark h2 {
-  color: #ff4d4d;
-}
-
-/* header */
-body.dark header {
-  border-bottom: 1px solid #2a2a2a;
-}
-
-/* =========================
-   BUTTONS DARK MODE (FIXED)
-========================= */
-
-/* solid button */
-body.dark .btn {
-  background: #ffffff;
-  color: #000000;
-  border: 2px solid #ffffff;
-}
-
-/* outline button FIX (Learn More issue solved) */
-body.dark .btn-outline {
-  background: transparent !important;
-  color: #ffffff !important;
-  border: 2px solid #ffffff;
-}
-
-/* hover for outline */
-body.dark .btn-outline:hover {
-  background: #ffffff;
-  color: #000000 !important;
-}
-
-/* safety override */
-body.dark .btn.btn-outline {
-  color: #ffffff !important;
 }
