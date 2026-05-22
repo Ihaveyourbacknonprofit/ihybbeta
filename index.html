@@ -1,63 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>I Have Your Back</title>
 
-  <!-- TAB ICON -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.ico">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-  <!-- LOADING SCREEN -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
-
-
-  <!-- NAVBAR -->
-  <header class="navbar">
+  <!-- HEADER -->
+  <header>
 
     <div class="logo-area">
       <img src="logo.png" alt="Logo">
-      <div class="title">I HAVE YOUR BACK</div>
-    </div>
-
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-
-    <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <!-- THEME SWITCH -->
-    <div class="theme-switch" onclick="toggleTheme()">
-      <div class="switch-track">
-        <div class="switch-thumb"></div>
-      </div>
+      <h1>I HAVE YOUR BACK</h1>
     </div>
 
   </header>
 
 
   <!-- HERO -->
-  <section class="hero reveal">
+  <section class="hero">
 
-    <h1>Supporting Communities With Compassion</h1>
+    <h2>Supporting Communities With Compassion</h2>
 
     <p>
-      I Have Your Back is a nonprofit corporation dedicated to helping individuals,
-      families, and communities through outreach, support, and meaningful action.
+      I Have Your Back is a nonprofit organization dedicated to helping individuals,
+      families, and communities through outreach and support.
     </p>
 
     <!-- BUTTONS -->
@@ -67,74 +44,42 @@
 
       <a href="#about" class="btn btn-outline">Learn More</a>
 
-      <a href="#" class="donate-btn">Donate</a>
-
     </div>
 
   </section>
 
 
   <!-- ABOUT -->
-  <section class="section reveal" id="about">
+  <section id="about">
 
     <h2>About Us</h2>
 
     <p>
-      Our mission is to create positive change through community support and compassionate outreach.
-      We believe every individual deserves guidance, opportunity, and access to meaningful help.
+      We provide support, resources, and outreach programs to help strengthen communities
+      and assist those in need.
     </p>
-
-    <div class="cards">
-
-      <div class="card">
-        <h3>Community Outreach</h3>
-        <p>We support communities through nonprofit programs and partnerships.</p>
-      </div>
-
-      <div class="card">
-        <h3>Resources & Assistance</h3>
-        <p>We connect people with helpful resources and support systems.</p>
-      </div>
-
-      <div class="card">
-        <h3>Positive Impact</h3>
-        <p>We aim to build stronger communities through compassion and action.</p>
-      </div>
-
-    </div>
 
   </section>
 
 
   <!-- CONTACT -->
-  <section class="section reveal" id="contact">
+  <section id="contact">
 
-    <h2>Contact Us</h2>
+    <h2>Contact</h2>
 
-    <form class="contact-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-
-      <input type="email" name="email" placeholder="Your Email" required>
-
-      <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Message</button>
-
-    </form>
+    <p>Email: info@ihaveyourback.org</p>
 
   </section>
 
 
   <!-- FOOTER -->
   <footer>
-    © 2026 I Have Your Back — All Rights Reserved
+    © 2026 I Have Your Back
   </footer>
 
 
-  <!-- SCRIPT -->
+  <!-- JS (EMPTY FOR NOW ON PURPOSE) -->
   <script src="script.js"></script>
 
 </body>
-
 </html>
