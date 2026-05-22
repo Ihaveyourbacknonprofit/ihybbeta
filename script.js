@@ -1,56 +1,75 @@
 
 // =========================
-// GLOBAL FUNCTIONS
+// THEME TOGGLE (GLOBAL)
 // =========================
-
-// THEME TOGGLE
 window.toggleTheme = function () {
 
   document.body.classList.toggle("dark");
 
   const isDark = document.body.classList.contains("dark");
 
+  // Save preference
   localStorage.setItem("theme", isDark ? "dark" : "light");
 
-};
+  // Move switch visually (optional safety sync)
+  const thumb = document.querySelector(".switch-thumb");
+  const track = document.querySelector(".switch-track");
 
-
-// HAMBURGER MENU (FIXED + SAFE)
-window.toggleMenu = function () {
-
-  const nav = document.getElementById("navLinks");
-
-  if (!nav) return;
-
-  if (nav.style.display === "flex") {
-    nav.style.display = "none";
-  } else {
-    nav.style.display = "flex";
+  if (thumb && track) {
+    if (isDark) {
+      thumb.style.left = "33px";
+      track.style.background = "#c40000";
+    } else {
+      thumb.style.left = "3px";
+      track.style.background = "#ddd";
+    }
   }
 
 };
 
 
 // =========================
-// INIT ON LOAD
+// LOAD SAVED THEME
 // =========================
-window.addEventListener("load", () => {
+function loadTheme() {
 
-  // HIDE LOADER SAFELY
-  const loader = document.getElementById("loader");
-
-  if (loader) {
-    loader.style.display = "none";
-  }
-
-  // RESTORE THEME
   const saved = localStorage.getItem("theme");
 
   if (saved === "dark") {
     document.body.classList.add("dark");
   }
 
-  // SCROLL REVEAL INIT
+  // sync switch position on load
+  const thumb = document.querySelector(".switch-thumb");
+  const track = document.querySelector(".switch-track");
+
+  if (thumb && track) {
+    if (document.body.classList.contains("dark")) {
+      thumb.style.left = "33px";
+      track.style.background = "#c40000";
+    } else {
+      thumb.style.left = "3px";
+      track.style.background = "#ddd";
+    }
+  }
+
+}
+
+
+// =========================
+// LOADER
+// =========================
+window.addEventListener("load", () => {
+
+  const loader = document.getElementById("loader");
+
+  if (loader) {
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 600);
+  }
+
+  loadTheme();
   revealOnScroll();
 
 });
@@ -80,7 +99,49 @@ window.addEventListener("scroll", revealOnScroll);
 
 
 // =========================
-// HEADER SHADOW
+// HAMBURGER MENU
+// =========================
+window.toggleMenu = function () {
+
+  const nav = document.getElementById("navLinks");
+
+  if (!nav) return;
+
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
+
+};
+
+
+// =========================
+// BUTTON CLICK FEEDBACK
+// =========================
+window.addEventListener("DOMContentLoaded", () => {
+
+  const buttons = document.querySelectorAll(".btn, .donate-btn, .contact-form button");
+
+  buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      btn.style.transform = "scale(0.96)";
+
+      setTimeout(() => {
+        btn.style.transform = "";
+      }, 120);
+
+    });
+
+  });
+
+});
+
+
+// =========================
+// HEADER SHADOW ON SCROLL
 // =========================
 window.addEventListener("scroll", () => {
 
