@@ -12,7 +12,6 @@ body {
   line-height: 1.6;
 }
 
-
 /* HEADER */
 
 header {
@@ -25,7 +24,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: 0.3s ease;
 }
 
 .title {
@@ -41,7 +39,6 @@ header {
   object-fit: contain;
   border-radius: 14px;
 }
-
 
 /* HERO */
 
@@ -64,7 +61,6 @@ header {
   color: #444444;
 }
 
-
 /* HERO BUTTONS */
 
 .hero-buttons {
@@ -76,26 +72,27 @@ header {
 }
 
 .btn {
-  background: #c40000;
+  background: #000000;
   color: white;
-  padding: 14px 30px;
-  border-radius: 12px;
+  padding: 16px 34px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.25s ease;
+  border: 2px solid #000000;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .btn:hover {
   transform: translateY(-4px);
-  opacity: 0.92;
+  background: #111111;
 }
 
 .btn-outline {
-  background: transparent;
-  border: 2px solid #c40000;
-  color: #c40000;
+  background: #000000;
+  color: white;
+  border: 2px solid #000000;
 }
-
 
 /* SECTIONS */
 
@@ -113,7 +110,6 @@ header {
   font-size: 18px;
   color: #444444;
 }
-
 
 /* CARDS */
 
@@ -142,7 +138,6 @@ header {
   margin-bottom: 15px;
 }
 
-
 /* CONTACT */
 
 .contact-box {
@@ -159,7 +154,6 @@ header {
   color: white;
 }
 
-
 /* FOOTER */
 
 footer {
@@ -169,7 +163,6 @@ footer {
   border-top: 1px solid #dddddd;
   margin-top: 60px;
 }
-
 
 /* MOBILE */
 
@@ -211,5 +204,4 @@ footer {
   .contact-box {
     padding: 35px;
   }
-
 }
