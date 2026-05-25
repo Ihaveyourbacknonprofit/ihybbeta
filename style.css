@@ -1,239 +1,336 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   background: #ffffff;
-  color: #000000;
-  line-height: 1.6;
+  color: #111111;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 header {
-  background: white;
-  padding: 20px 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #eeeeee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+
+  padding: 18px 8%;
+
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s ease;
+}
+
+.header-shadow {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-area img {
+  width: 62px;
+  height: 62px;
 }
 
 .title {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 24px;
+  font-weight: 800;
   color: #c40000;
-  letter-spacing: 1px;
 }
 
-.logo img {
-  width: 75px;
-  height: 75px;
-  object-fit: contain;
-  border-radius: 14px;
+nav {
+  display: flex;
+  gap: 30px;
 }
 
-/* =========================
-   HERO
-========================= */
+nav a {
+  text-decoration: none;
+  color: #111111;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
 
+nav a:hover,
+.nav-active {
+  color: #c40000;
+}
+
+/* HERO */
 .hero {
-  padding: 120px 8%;
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+
+  padding: 160px 8% 120px;
+
+  background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.9)),
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop')
+    center/cover;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+/* HERO TEXT */
+.hero-tag {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(196,0,0,0.08);
+  color: #c40000;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
 }
 
 .hero h1 {
-  font-size: 60px;
-  color: #c40000;
-  margin-bottom: 20px;
+  font-size: 72px;
+  line-height: 1.1;
+  margin-bottom: 25px;
 }
 
 .hero p {
+  font-size: 20px;
+  color: #444;
   max-width: 760px;
   margin: auto;
-  font-size: 20px;
-  color: #444444;
 }
 
-/* =========================
-   HERO BUTTONS
-========================= */
-
+/* BUTTONS */
 .hero-buttons {
   margin-top: 35px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-
-  background: #000000;
-  color: white;
-
   padding: 16px 34px;
-
   border-radius: 999px;
-
   text-decoration: none;
-
-  font-weight: bold;
-
+  font-weight: 600;
   transition: 0.25s ease;
 
-  border: 2px solid #000000;
+  background: #c40000;
+  border: 2px solid #c40000;
+  color: white;
 
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(196,0,0,0.18);
 }
 
 .btn:hover {
-  transform: translateY(-4px);
-  background: #111111;
+  transform: translateY(-5px);
 }
 
 .btn-outline {
   background: transparent;
-  color: #000000;
-  border: 2px solid #000000;
+  color: #111;
+  border: 2px solid #111;
+  box-shadow: none;
 }
 
 .btn-outline:hover {
-  background: #000000;
+  background: #111;
   color: white;
 }
 
-/* =========================
-   SOCIAL BUTTONS
-========================= */
-
 .social-instagram {
   background: #E1306C;
-  border: 2px solid #E1306C;
+  border-color: #E1306C;
 }
 
 .social-facebook {
   background: #1877F2;
-  border: 2px solid #1877F2;
+  border-color: #1877F2;
 }
 
-.social-instagram:hover,
-.social-facebook:hover {
-  transform: translateY(-4px);
-  opacity: 0.92;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
+/* SECTIONS */
 .section {
-  padding: 90px 8%;
+  padding: 110px 8%;
 }
 
+.section-label {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 .section h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: #c40000;
+  font-size: 52px;
+  margin-top: 10px;
 }
 
-.section p {
-  font-size: 18px;
-  color: #444444;
+.section-description {
+  max-width: 850px;
+  color: #555;
+  font-size: 19px;
 }
 
-/* =========================
-   CARDS
-========================= */
-
+/* CARDS */
 .cards {
+  margin-top: 55px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 45px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
 }
 
 .card {
   background: white;
-  padding: 35px;
-  border-radius: 24px;
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.06);
   border-top: 5px solid #c40000;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-  transition: 0.25s ease;
+  transition: 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 18px;
 }
 
 .card h3 {
   color: #c40000;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-/* =========================
-   CONTACT
-========================= */
+.card p {
+  color: #555;
+}
 
-.contact-box {
-  background: #c40000;
+/* IMPACT */
+.impact-section {
+  padding: 120px 8%;
+  background: linear-gradient(135deg, #c40000, #850000);
   color: white;
-  padding: 55px;
+}
+
+.impact-grid {
+  margin-top: 55px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.impact-box {
+  background: rgba(255,255,255,0.08);
+  padding: 35px;
   border-radius: 24px;
-  margin-top: 35px;
+  border: 1px solid rgba(255,255,255,0.12);
 }
 
-.contact-box p {
-  margin: 15px 0;
-  font-size: 18px;
-  color: white;
+/* CONTACT */
+.contact-box {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.contact-item {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
 
+.contact-item span {
+  display: block;
+  color: #c40000;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* FOOTER */
 footer {
+  padding: 50px 20px;
   text-align: center;
-  padding: 40px;
-  color: gray;
-  border-top: 1px solid #dddddd;
-  margin-top: 60px;
+  border-top: 1px solid #eee;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-links a:hover {
+  color: #c40000;
+}
+
+/* ✅ SAFE ANIMATION SYSTEM (NO MORE INVISIBLE BUGS) */
+.reveal,
+.fade-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+.reveal.active,
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .section h2 {
+    font-size: 40px;
+  }
+}
 
 @media (max-width: 700px) {
-
   header {
-    padding: 20px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
-
-  .logo img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .hero {
-    padding: 90px 20px;
+    padding: 18px 20px;
   }
 
   .hero h1 {
@@ -241,18 +338,75 @@ footer {
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 17px;
   }
 
-  .section {
-    padding: 70px 20px;
+  .btn {
+    width: 100%;
+  }
+}
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  color: #111;
+  z-index: 1001;
+}
+
+/* MOBILE NAV STYLING */
+@media (max-width: 900px) {
+
+  /* show hamburger */
+  .hamburger {
+    display: block;
   }
 
-  .section h2 {
-    font-size: 34px;
+  /* override desktop nav */
+  nav {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+
+    display: none;
+    flex-direction: column;
+    gap: 18px;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+
+    padding: 20px;
+    border-radius: 16px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+
+    min-width: 180px;
   }
 
-  .contact-box {
-    padding: 35px;
+  /* when active */
+  nav.active {
+    display: flex;
   }
+
+  nav a {
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+}
+
+/* HAMBURGER BASE */
+.hamburger {
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+/* ROTATE ANIMATION WHEN ACTIVE */
+.hamburger.active {
+  transform: rotate(90deg);
 }
