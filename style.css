@@ -410,3 +410,57 @@ footer {
 .hamburger.active {
   transform: rotate(90deg);
 }
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+  background: #0f0f0f;
+  color: #f1f1f1;
+}
+
+/* HEADER */
+body.dark header {
+  background: rgba(15,15,15,0.92);
+}
+
+body.dark nav a {
+  color: #f1f1f1;
+}
+
+body.dark nav a:hover,
+body.dark .nav-active {
+  color: #ff4d4d;
+}
+
+/* CARDS */
+body.dark .card {
+  background: #1a1a1a;
+  color: #f1f1f1;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+body.dark .card p {
+  color: #ccc;
+}
+
+/* CONTACT */
+body.dark .contact-item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+}
+
+/* HERO TEXT */
+body.dark .hero p {
+  color: #ccc;
+}
+
+/* FOOTER */
+body.dark footer {
+  border-top: 1px solid #333;
+}
+
+body.dark .footer-links a {
+  color: #ccc;
+}
