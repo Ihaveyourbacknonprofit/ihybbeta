@@ -104,28 +104,26 @@ const nav = document.getElementById("nav");
 
 if (hamburger && nav) {
 
+  // toggle menu
   hamburger.addEventListener("click", (e) => {
     nav.classList.toggle("active");
-    hamburger.classList.toggle("active");
     e.stopPropagation();
   });
 
-  // close on link click
+  // close when clicking nav links
   document.querySelectorAll("#nav a").forEach(link => {
     link.addEventListener("click", () => {
       nav.classList.remove("active");
-      hamburger.classList.remove("active");
     });
   });
 
-  // close on outside click
+  // close when clicking outside
   document.addEventListener("click", (e) => {
     const clickedInside = nav.contains(e.target);
     const clickedHamburger = hamburger.contains(e.target);
 
     if (!clickedInside && !clickedHamburger) {
       nav.classList.remove("active");
-      hamburger.classList.remove("active");
     }
   });
 }
