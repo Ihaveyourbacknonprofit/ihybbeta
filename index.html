@@ -2,77 +2,79 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>I Have Your Back</title>
 
-  <!-- TAB ICON -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="I Have Your Back is a nonprofit organization supporting families and communities through outreach, compassion, and meaningful action.">
 
-  <!-- CSS FILE -->
+  <link rel="icon" href="favicon.ico">
+
   <link rel="stylesheet" href="style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- HEADER -->
-  <header>
-
-    <div class="title">
-      I HAVE YOUR BACK
+  <header id="header">
+  
+    <div class="logo-area">
+      <img src="logo.png" alt="I Have Your Back nonprofit logo">
+      <div class="title">I HAVE YOUR BACK</div>
     </div>
-
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
+  
+    <!-- HAMBURGER ICON (mobile only) -->
+    <div class="hamburger" id="hamburger">
+      ☰
     </div>
-
+  
+    <!-- NAVIGATION -->
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  
   </header>
 
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="home">
 
-    <h1>Supporting Communities With Compassion</h1>
+    <div class="hero-content fade-up">
 
-    <p>
-      I Have Your Back is a nonprofit corporation dedicated to helping individuals,
-      families, and communities through outreach, support, and meaningful action.
-    </p>
+      <span class="hero-tag">COMMUNITY • SUPPORT • OUTREACH</span>
 
-    <!-- MAIN BUTTONS -->
-    <div class="hero-buttons">
+      <h1>
+        Helping Families & Communities<br>
+        When They Need It Most
+      </h1>
 
-      <a href="#contact" class="btn">
-        Contact Us
-      </a>
+      <p>
+        I Have Your Back is a nonprofit organization dedicated to uplifting
+        communities through compassion, outreach, support programs,
+        and meaningful action.
+      </p>
 
-      <a href="#about" class="btn btn-outline">
-        Learn More
-      </a>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Contact Us</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
 
-    </div>
+      <div class="hero-buttons">
+        <a href="https://instagram.com/ihaveyourbacknonprofit" target="_blank" class="btn social-instagram">
+          Instagram
+        </a>
 
-    <!-- SOCIAL BUTTONS -->
-    <div class="hero-buttons">
-
-      <a href="https://instagram.com/ihaveyourbacknonprofit"
-         target="_blank"
-         class="btn social-instagram">
-
-        📸 Instagram
-
-      </a>
-
-      <a href="https://facebook.com/61581156760042"
-         target="_blank"
-         class="btn social-facebook">
-
-        📘 Facebook
-
-      </a>
+        <a href="https://facebook.com/61581156760042" target="_blank" class="btn social-facebook">
+          Facebook
+        </a>
+      </div>
 
     </div>
 
@@ -80,37 +82,70 @@
 
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section class="section reveal" id="about">
 
-    <h2>Our Mission</h2>
+    <div class="section-top">
+      <span class="section-label">OUR MISSION</span>
+      <h2>Creating Real Impact Through Compassion</h2>
+    </div>
 
-    <p>
-      Our mission is to create positive change through community support and
-      compassionate outreach. We believe every individual deserves guidance,
-      opportunity, and access to meaningful help.
+    <p class="section-description">
+      Our mission is to create positive change through community support,
+      outreach, and meaningful assistance.
     </p>
 
     <div class="cards">
 
       <div class="card">
+        <div class="card-icon">🤝</div>
         <h3>Community Outreach</h3>
-        <p>
-          We support local communities through nonprofit programs and partnerships.
-        </p>
+        <p>Supporting local communities through programs and partnerships.</p>
       </div>
 
       <div class="card">
+        <div class="card-icon">❤️</div>
         <h3>Resources & Assistance</h3>
-        <p>
-          We connect people with helpful resources and support systems.
-        </p>
+        <p>Connecting families with support systems and guidance.</p>
       </div>
 
       <div class="card">
+        <div class="card-icon">🌍</div>
         <h3>Positive Impact</h3>
-        <p>
-          We aim to build stronger communities through compassion and action.
-        </p>
+        <p>Building stronger communities through action and compassion.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- IMPACT -->
+  <section class="impact-section reveal" id="impact">
+
+    <span class="section-label light">WAYS WE HELP</span>
+
+    <h2>Supporting Communities Through Action</h2>
+
+    <div class="impact-grid">
+
+      <div class="impact-box">
+        <h3>Emergency Assistance</h3>
+        <p>Helping individuals and families during difficult times.</p>
+      </div>
+
+      <div class="impact-box">
+        <h3>Youth Support</h3>
+        <p>Encouraging mentorship and positive growth.</p>
+      </div>
+
+      <div class="impact-box">
+        <h3>Community Events</h3>
+        <p>Bringing people together through outreach programs.</p>
+      </div>
+
+      <div class="impact-box">
+        <h3>Local Partnerships</h3>
+        <p>Working with organizations to strengthen communities.</p>
       </div>
 
     </div>
@@ -119,20 +154,34 @@
 
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
+  <section class="section reveal" id="contact">
 
-    <h2>Contact Us</h2>
+    <div class="section-top">
+      <span class="section-label">CONTACT</span>
+      <h2>We’re Here To Help</h2>
+    </div>
 
     <div class="contact-box">
 
-      <p><strong>Email:</strong> Info@ihaveyourback.org</p>
+      <div class="contact-item">
+        <span>Email</span>
+        <p>Info@ihaveyourback.org</p>
+      </div>
 
-      <p><strong>Secondary Email:</strong>
-      Ihaveyourbackgnk@gmail.com</p>
+      <div class="contact-item">
+        <span>Secondary Email</span>
+        <p>Ihaveyourbackgnk@gmail.com</p>
+      </div>
 
-      <p><strong>Phone:</strong> (708) 477-2853</p>
+      <div class="contact-item">
+        <span>Phone</span>
+        <p>+1 (708) 477-2853</p>
+      </div>
 
-      <p><strong>Location:</strong> Des Moines, Washington</p>
+      <div class="contact-item">
+        <span>Location</span>
+        <p>Des Moines, Washington</p>
+      </div>
 
     </div>
 
@@ -141,13 +190,19 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2026 I Have Your Back — All Rights Reserved
+
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <p>© 2026 I Have Your Back — All Rights Reserved</p>
+
   </footer>
 
 
-  <!-- JS -->
   <script src="script.js"></script>
 
 </body>
-
 </html>
