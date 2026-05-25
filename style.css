@@ -8,11 +8,14 @@
 
 body {
   background: #ffffff;
-  color: #111111;
+  color: #000000;
   line-height: 1.6;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header {
   background: white;
@@ -40,7 +43,9 @@ header {
   border-radius: 14px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   padding: 120px 8%;
@@ -61,7 +66,9 @@ header {
   color: #444444;
 }
 
-/* HERO BUTTONS */
+/* =========================
+   HERO BUTTONS
+========================= */
 
 .hero-buttons {
   margin-top: 35px;
@@ -72,14 +79,23 @@ header {
 }
 
 .btn {
+  display: inline-block;
+
   background: #000000;
   color: white;
+
   padding: 16px 34px;
+
   border-radius: 999px;
+
   text-decoration: none;
+
   font-weight: bold;
+
   transition: 0.25s ease;
+
   border: 2px solid #000000;
+
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
@@ -89,12 +105,39 @@ header {
 }
 
 .btn-outline {
-  background: #000000;
-  color: white;
+  background: transparent;
+  color: #000000;
   border: 2px solid #000000;
 }
 
-/* SECTIONS */
+.btn-outline:hover {
+  background: #000000;
+  color: white;
+}
+
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
+.social-instagram {
+  background: #E1306C;
+  border: 2px solid #E1306C;
+}
+
+.social-facebook {
+  background: #1877F2;
+  border: 2px solid #1877F2;
+}
+
+.social-instagram:hover,
+.social-facebook:hover {
+  transform: translateY(-4px);
+  opacity: 0.92;
+}
+
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
   padding: 90px 8%;
@@ -111,7 +154,9 @@ header {
   color: #444444;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 
 .cards {
   display: grid;
@@ -138,7 +183,9 @@ header {
   margin-bottom: 15px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-box {
   background: #c40000;
@@ -154,7 +201,9 @@ header {
   color: white;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   text-align: center;
@@ -164,7 +213,9 @@ footer {
   margin-top: 60px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
