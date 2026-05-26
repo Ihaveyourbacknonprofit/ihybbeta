@@ -74,7 +74,7 @@ header {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 /* =========================
@@ -103,27 +103,29 @@ nav a:hover,
 ========================= */
 
 .theme-toggle {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
 
   border: none;
   border-radius: 50%;
 
+  cursor: pointer;
+
   background: #f3f3f3;
   color: #111;
 
-  font-size: 22px;
-  cursor: pointer;
+  font-size: 18px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  transition: 0.3s ease;
+  transition: 0.25s ease;
 }
 
 .theme-toggle:hover {
-  transform: scale(1.08);
+  transform: translateY(-2px);
+  background: #e9e9e9;
 }
 
 /* =========================
@@ -141,14 +143,9 @@ nav a:hover,
 
   user-select: none;
 
-  color: #111;
+  color: #111111; /* IMPORTANT FIX */
 
   transition: 0.3s ease;
-}
-
-.hamburger.active {
-  transform: rotate(180deg) scale(1.1);
-  color: #c40000;
 }
 
 /* =========================
@@ -357,9 +354,7 @@ nav a:hover,
 
 .impact-section {
   padding: 120px 8%;
-
   background: linear-gradient(135deg, #c40000, #850000);
-
   color: white;
 }
 
@@ -374,17 +369,14 @@ nav a:hover,
 
 .impact-box {
   background: rgba(255,255,255,0.08);
-
   padding: 35px;
   border-radius: 24px;
-
   border: 1px solid rgba(255,255,255,0.12);
-
   backdrop-filter: blur(6px);
 }
 
 /* =========================
-   CONTACT
+   CONTACT BOX (UPDATED SUPPORT)
 ========================= */
 
 .contact-box {
@@ -392,7 +384,6 @@ nav a:hover,
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
   gap: 20px;
 }
 
@@ -403,16 +394,13 @@ nav a:hover,
   border-radius: 24px;
 
   border: 1px solid #eee;
-
   box-shadow: 0 8px 30px rgba(0,0,0,0.05);
 }
 
 .contact-item span {
   display: block;
-
   color: #c40000;
   font-weight: 700;
-
   margin-bottom: 10px;
 }
 
@@ -421,10 +409,7 @@ nav a:hover,
   overflow-wrap: anywhere;
 }
 
-/* =========================
-   CONTACT LINKS
-========================= */
-
+/* CONTACT LINKS */
 .contact-link {
   text-decoration: none;
   color: inherit;
@@ -436,16 +421,13 @@ nav a:hover,
 }
 
 /* =========================
-   CTA SECTION
+   CTA
 ========================= */
 
 .cta-section {
   padding: 110px 8%;
   text-align: center;
-
-  background:
-    linear-gradient(135deg, #c40000, #850000);
-
+  background: linear-gradient(135deg, #c40000, #850000);
   color: white;
 }
 
@@ -467,138 +449,6 @@ nav a:hover,
   background: white;
   color: #c40000;
   border-color: white;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.cta-section .btn:hover {
-  background: #f5f5f5;
-  color: #850000;
-}
-
-/* =========================
-   HEADER RIGHT
-========================= */
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-/* =========================
-   THEME TOGGLE
-========================= */
-
-.theme-toggle {
-  width: 48px;
-  height: 48px;
-
-  border: none;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  background: #f3f3f3;
-  color: #111;
-
-  font-size: 18px;
-
-  transition: 0.25s ease;
-}
-
-.theme-toggle:hover {
-  transform: translateY(-2px);
-  background: #e9e9e9;
-}
-
-/* =========================
-   DARK MODE EXTRA
-========================= */
-
-body.dark .theme-toggle {
-  background: #1f1f1f;
-  color: #fff;
-}
-
-body.dark .theme-toggle:hover {
-  background: #2a2a2a;
-}
-
-body.dark .hamburger {
-  color: white;
-}
-
-body.dark nav {
-  background: rgba(20,20,20,0.96);
-}
-
-body.dark .contact-item p,
-body.dark .section-description {
-  color: #ccc;
-}
-
-body.dark .contact-link:hover {
-  color: #ff4d4d;
-}
-
-body.dark .cta-section {
-  background:
-    linear-gradient(135deg, #850000, #400000);
-}
-
-/* =========================
-   MOBILE FIXES
-========================= */
-
-@media (max-width: 900px) {
-
-  .header-right {
-    gap: 12px;
-  }
-
-  .theme-toggle {
-    width: 42px;
-    height: 42px;
-  }
-
-  .cta-section h2 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 700px) {
-
-  .cta-section {
-    padding: 90px 20px;
-  }
-
-  .cta-section h2 {
-    font-size: 34px;
-  }
-
-  .cta-section p {
-    font-size: 17px;
-  }
-
-  .footer-links {
-    flex-wrap: wrap;
-  }
-}
-
-/* =========================
-   CTA SECTION
-========================= */
-
-.cta-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.cta-section p {
-  margin: 18px auto 30px;
-  max-width: 700px;
-  color: #666;
 }
 
 /* =========================
@@ -615,9 +465,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 25px;
-
   margin-bottom: 20px;
-
   flex-wrap: wrap;
 }
 
@@ -632,17 +480,14 @@ footer {
 }
 
 /* =========================
-   REVEAL ANIMATIONS
+   REVEAL
 ========================= */
 
 .reveal,
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
-
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+  transition: 0.8s ease;
 }
 
 .reveal.active,
@@ -660,22 +505,6 @@ body.dark {
   color: #f1f1f1;
 }
 
-/* DARK MODE HAMBURGER */
-body.dark .hamburger {
-  color: #ffffff;
-}
-
-/* HERO */
-
-body.dark .hero {
-  background:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
-    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop')
-    center/cover;
-}
-
-/* HEADER */
-
 body.dark header {
   background: rgba(15,15,15,0.92);
 }
@@ -689,60 +518,30 @@ body.dark .nav-active {
   color: #ff4d4d;
 }
 
-/* THEME BUTTON */
+/* IMPORTANT FIX: hamburger visibility */
+body.dark .hamburger {
+  color: #ffffff;
+}
 
 body.dark .theme-toggle {
   background: #1f1f1f;
   color: #fff;
 }
 
-/* HERO TEXT */
-
 body.dark .hero p,
 body.dark .section-description,
-body.dark .card p,
-body.dark .cta-section p {
+body.dark .card p {
   color: #cccccc;
 }
-
-/* BUTTONS */
-
-body.dark .btn-outline {
-  color: #fff;
-  border-color: #fff;
-}
-
-body.dark .btn-outline:hover {
-  background: #fff;
-  color: #111;
-}
-
-/* CARDS */
 
 body.dark .card,
 body.dark .contact-item {
   background: #1a1a1a;
-  color: #f1f1f1;
-
   border-color: #333;
-
-  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
 }
 
-/* FOOTER */
-
-body.dark footer {
-  border-top: 1px solid #333;
-}
-
-body.dark .footer-links a {
-  color: #ccc;
-}
-
-/* MOBILE NAV */
-
-body.dark nav {
-  background: rgba(20,20,20,0.95);
+body.dark .cta-section {
+  background: linear-gradient(135deg, #850000, #400000);
 }
 
 /* =========================
@@ -760,23 +559,15 @@ body.dark nav {
     top: 90px;
     right: 20px;
 
-    display: flex;
     flex-direction: column;
     gap: 18px;
 
     background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
-
     padding: 20px;
     border-radius: 16px;
 
-    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-
-    min-width: 180px;
-
     opacity: 0;
     visibility: hidden;
-
     transform: translateY(-10px);
 
     transition: 0.25s ease;
@@ -791,27 +582,12 @@ body.dark nav {
   .hero h1 {
     font-size: 52px;
   }
-
-  .section h2,
-  .impact-section h2,
-  .cta-section h2 {
-    font-size: 40px;
-  }
 }
 
 @media (max-width: 700px) {
 
   header {
     padding: 18px 20px;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
-  .logo-area img {
-    width: 52px;
-    height: 52px;
   }
 
   .hero {
@@ -822,17 +598,7 @@ body.dark nav {
     font-size: 42px;
   }
 
-  .hero p {
-    font-size: 17px;
-  }
-
   .btn {
     width: 100%;
-  }
-
-  .theme-toggle {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
   }
 }
