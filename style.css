@@ -173,6 +173,8 @@ nav a:hover,
   max-width: 900px;
 }
 
+
+
 /* =========================
    HERO TEXT
 ========================= */
@@ -470,6 +472,13 @@ body.dark .contact-form input:focus,
 body.dark .contact-form textarea:focus {
   border-color: #ff4d4d;
   box-shadow: 0 0 0 4px rgba(255,77,77,0.15);
+}
+
+body.dark .hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop')
+    center/cover !important;
 }
 
 /* =========================
