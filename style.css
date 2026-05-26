@@ -901,3 +901,49 @@ body.dark .donate-dropdown a {
 body.dark .donate-dropdown a:hover {
   background: #2a2a2a;
 }
+
+
+/* =========================
+   MOBILE HEADER POLISH FIX
+   (PUT AT VERY BOTTOM)
+========================= */
+
+@media (max-width: 900px) {
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Better spacing + alignment */
+  .theme-toggle {
+    order: 1;
+    width: 44px;
+    height: 44px;
+  }
+
+  .hamburger {
+    order: 2;
+    font-size: 30px;
+    margin: 0 6px;
+  }
+
+  /* If nav button/links ever appear as icons later */
+  nav {
+    order: 3;
+  }
+}
+
+/* extra small screens cleanup */
+@media (max-width: 480px) {
+
+  .header-right {
+    gap: 6px;
+  }
+
+  .theme-toggle,
+  .hamburger {
+    transform: scale(0.95);
+  }
+}
