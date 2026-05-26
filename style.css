@@ -722,3 +722,107 @@ body.dark .cta-section {
     width: 100%;
   }
 }
+/* =========================
+   🔥 FULL DARK MODE FIX PATCH
+========================= */
+
+/* page background */
+body.dark {
+  background: #0b0b0b;
+  color: #f1f1f1;
+}
+
+/* make ALL white sections dark */
+body.dark .section {
+  background: transparent;
+}
+
+/* HEADER FIX */
+body.dark header {
+  background: rgba(10,10,10,0.92);
+  backdrop-filter: blur(10px);
+}
+
+/* NAV DROPDOWN FIX */
+body.dark nav {
+  background: rgba(20,20,20,0.98);
+}
+
+body.dark nav a {
+  color: #f1f1f1;
+}
+
+/* HERO IMAGE FIX (strong override so it NEVER stays light) */
+body.dark .hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop')
+    center/cover !important;
+}
+
+/* TEXT FIXES */
+body.dark .hero p,
+body.dark .section-description,
+body.dark .card p {
+  color: #cfcfcf;
+}
+
+/* CARDS + CONTACT BOX */
+body.dark .card,
+body.dark .contact-item {
+  background: #151515;
+  border-color: #2a2a2a;
+  color: #fff;
+}
+
+/* FORM FIX */
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  color: #fff;
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: #777;
+}
+
+/* FOCUS STATE */
+body.dark .contact-form input:focus,
+body.dark .contact-form textarea:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 0 4px rgba(255,77,77,0.15);
+}
+
+/* BUTTON FIX */
+body.dark .btn-outline {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark .btn-outline:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* HAMBURGER */
+body.dark .hamburger {
+  color: #fff;
+}
+
+/* THEME BUTTON */
+body.dark .theme-toggle {
+  background: #1c1c1c;
+  color: #fff;
+}
+
+/* CTA FIX */
+body.dark .cta-section {
+  background: linear-gradient(135deg, #6a0000, #2a0000);
+}
+
+/* FOOTER */
+body.dark footer {
+  border-top: 1px solid #2a2a2a;
+}
