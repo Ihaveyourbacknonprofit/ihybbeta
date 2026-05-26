@@ -1,4 +1,7 @@
-/* RESET */
+/* =========================
+   RESET
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +15,16 @@ body {
   color: #111111;
   line-height: 1.7;
   overflow-x: hidden;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header {
   position: fixed;
   top: 0;
@@ -47,13 +57,29 @@ header {
 .logo-area img {
   width: 62px;
   height: 62px;
+  object-fit: contain;
 }
 
 .title {
   font-size: 24px;
   font-weight: 800;
   color: #c40000;
+  letter-spacing: 1px;
 }
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
   display: flex;
@@ -72,7 +98,63 @@ nav a:hover,
   color: #c40000;
 }
 
-/* HERO */
+/* =========================
+   THEME TOGGLE
+========================= */
+
+.theme-toggle {
+  width: 56px;
+  height: 56px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f3f3f3;
+  color: #111;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.08);
+}
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.hamburger {
+  display: none;
+
+  background: transparent;
+  border: none;
+
+  font-size: 32px;
+  cursor: pointer;
+
+  user-select: none;
+
+  color: #111;
+
+  transition: 0.3s ease;
+}
+
+.hamburger.active {
+  transform: rotate(180deg) scale(1.1);
+  color: #c40000;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -94,16 +176,24 @@ nav a:hover,
   max-width: 900px;
 }
 
-/* HERO TEXT */
+/* =========================
+   HERO TEXT
+========================= */
+
 .hero-tag {
   display: inline-block;
+
   padding: 10px 18px;
   border-radius: 999px;
+
   background: rgba(196,0,0,0.08);
+
   color: #c40000;
+
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
+
   margin-bottom: 25px;
 }
 
@@ -120,9 +210,13 @@ nav a:hover,
   margin: auto;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
+
 .hero-buttons {
   margin-top: 35px;
+
   display: flex;
   justify-content: center;
   gap: 18px;
@@ -131,10 +225,13 @@ nav a:hover,
 
 .btn {
   display: inline-block;
+
   padding: 16px 34px;
   border-radius: 999px;
+
   text-decoration: none;
   font-weight: 600;
+
   transition: 0.25s ease;
 
   background: #c40000;
@@ -160,6 +257,10 @@ nav a:hover,
   color: white;
 }
 
+/* =========================
+   SOCIAL BUTTONS
+========================= */
+
 .social-instagram {
   background: #E1306C;
   border-color: #E1306C;
@@ -170,18 +271,32 @@ nav a:hover,
   border-color: #1877F2;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
+
 .section {
   padding: 110px 8%;
 }
 
+.section-top {
+  margin-bottom: 25px;
+}
+
 .section-label {
-  color: white;
+  color: #c40000;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
 }
-.section h2 {
+
+.section-label.light {
+  color: rgba(255,255,255,0.85);
+}
+
+.section h2,
+.impact-section h2,
+.cta-section h2 {
   font-size: 52px;
   margin-top: 10px;
 }
@@ -192,20 +307,29 @@ nav a:hover,
   font-size: 19px;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
+
 .cards {
   margin-top: 55px;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 28px;
 }
 
 .card {
   background: white;
+
   padding: 40px;
   border-radius: 28px;
+
   box-shadow: 0 8px 35px rgba(0,0,0,0.06);
+
   border-top: 5px solid #c40000;
+
   transition: 0.3s ease;
 }
 
@@ -227,47 +351,68 @@ nav a:hover,
   color: #555;
 }
 
-/* IMPACT */
+/* =========================
+   IMPACT
+========================= */
+
 .impact-section {
   padding: 120px 8%;
+
   background: linear-gradient(135deg, #c40000, #850000);
+
   color: white;
 }
 
 .impact-grid {
   margin-top: 55px;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
   gap: 25px;
 }
 
 .impact-box {
   background: rgba(255,255,255,0.08);
+
   padding: 35px;
   border-radius: 24px;
+
   border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(6px);
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
+
 .contact-box {
   margin-top: 40px;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
   gap: 20px;
 }
 
 .contact-item {
   background: white;
+
   padding: 30px;
   border-radius: 24px;
+
   border: 1px solid #eee;
+
   box-shadow: 0 8px 30px rgba(0,0,0,0.05);
 }
 
 .contact-item span {
   display: block;
+
   color: #c40000;
   font-weight: 700;
+
   margin-bottom: 10px;
 }
 
@@ -276,7 +421,25 @@ nav a:hover,
   overflow-wrap: anywhere;
 }
 
-/* FOOTER */
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-section p {
+  margin: 18px auto 30px;
+  max-width: 700px;
+  color: #666;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   padding: 50px 20px;
   text-align: center;
@@ -287,12 +450,16 @@ footer {
   display: flex;
   justify-content: center;
   gap: 25px;
+
   margin-bottom: 20px;
+
+  flex-wrap: wrap;
 }
 
 .footer-links a {
   text-decoration: none;
   color: #555;
+  transition: 0.25s ease;
 }
 
 .footer-links a:hover {
@@ -307,139 +474,16 @@ footer {
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 }
 
 .reveal.active,
 .fade-up.active {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  nav {
-    position: absolute;
-    top: 80px;
-    right: 20px;
-  
-    flex-direction: column;
-    gap: 18px;
-  
-    background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(12px);
-  
-    padding: 20px;
-    border-radius: 16px;
-  
-    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-  
-    min-width: 180px;
-  
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-  
-    transition: 0.25s ease;
-  }
-  
-  nav.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .hero h1 {
-    font-size: 52px;
-  }
-
-  .section h2 {
-    font-size: 40px;
-  }
-}
-
-@media (max-width: 700px) {
-  header {
-    padding: 18px 20px;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .hero p {
-    font-size: 17px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-/* =========================
-   HAMBURGER MENU
-========================= */
-
-.hamburger {
-  display: none;
-  font-size: 32px;
-  cursor: pointer;
-  user-select: none;
-  color: #111;
-  z-index: 1001;
-}
-
-/* MOBILE NAV STYLING */
-@media (max-width: 900px) {
-
-  /* show hamburger */
-  .hamburger {
-    display: block;
-  }
-
-  /* override desktop nav */
-  nav {
-    position: absolute;
-    top: 80px;
-    right: 20px;
-
-    display: none;
-    flex-direction: column;
-    gap: 18px;
-
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-
-    padding: 20px;
-    border-radius: 16px;
-
-    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-
-    min-width: 180px;
-  }
-
-  /* when active */
-  nav.active {
-    display: flex;
-  }
-
-  nav a {
-    padding: 10px 5px;
-    font-size: 16px;
-  }
-}
-
-/* HAMBURGER BASE */
-.hamburger {
-  font-size: 32px;
-  cursor: pointer;
-  user-select: none;
-  transition: transform 0.3s ease;
-}
-
-/* ROTATE ANIMATION WHEN ACTIVE */
-.hamburger.active {
-  transform: rotate(180deg) scale(1.1);
-  color: #c40000;
 }
 
 /* =========================
@@ -451,11 +495,7 @@ body.dark {
   color: #f1f1f1;
 }
 
-body {
-  transition:
-    background 0.35s ease,
-    color 0.35s ease;
-}
+/* HERO */
 
 body.dark .hero {
   background:
@@ -465,6 +505,7 @@ body.dark .hero {
 }
 
 /* HEADER */
+
 body.dark header {
   background: rgba(15,15,15,0.92);
 }
@@ -478,33 +519,150 @@ body.dark .nav-active {
   color: #ff4d4d;
 }
 
-/* CARDS */
-body.dark .card {
-  background: #1a1a1a;
-  color: #f1f1f1;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-}
+/* THEME BUTTON */
 
-body.dark .card p {
-  color: #ccc;
-}
-
-/* CONTACT */
-body.dark .contact-item {
-  background: #1a1a1a;
-  border: 1px solid #333;
+body.dark .theme-toggle {
+  background: #1f1f1f;
+  color: #fff;
 }
 
 /* HERO TEXT */
-body.dark .hero p {
-  color: #ccc;
+
+body.dark .hero p,
+body.dark .section-description,
+body.dark .card p,
+body.dark .cta-section p {
+  color: #cccccc;
+}
+
+/* BUTTONS */
+
+body.dark .btn-outline {
+  color: #fff;
+  border-color: #fff;
+}
+
+body.dark .btn-outline:hover {
+  background: #fff;
+  color: #111;
+}
+
+/* CARDS */
+
+body.dark .card,
+body.dark .contact-item {
+  background: #1a1a1a;
+  color: #f1f1f1;
+
+  border-color: #333;
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
 }
 
 /* FOOTER */
+
 body.dark footer {
   border-top: 1px solid #333;
 }
 
 body.dark .footer-links a {
   color: #ccc;
+}
+
+/* MOBILE NAV */
+
+body.dark nav {
+  background: rgba(20,20,20,0.95);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+
+    padding: 20px;
+    border-radius: 16px;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+
+    min-width: 180px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: 0.25s ease;
+  }
+
+  nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .section h2,
+  .impact-section h2,
+  .cta-section h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 18px 20px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .logo-area img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .hero {
+    padding: 140px 20px 90px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .theme-toggle {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
 }
