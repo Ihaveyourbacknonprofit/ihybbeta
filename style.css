@@ -947,32 +947,3 @@ body.dark .donate-dropdown a:hover {
     transform: scale(0.95);
   }
 }
-
-/* =========================
-   DONATION BUTTON FIX (ZELLE / CASHAPP / PAYPAL)
-========================= */
-
-.donate-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  padding: 16px 34px;
-  border-radius: 999px;
-
-  font-weight: 600;
-  text-decoration: none;
-
-  background: #c40000;
-  color: white;
-  border: 2px solid #c40000;
-
-  box-shadow: 0 10px 25px rgba(196,0,0,0.18);
-
-  transition: 0.25s ease;
-}
-
-.donate-btn:hover {
-  transform: translateY(-5px);
-}
