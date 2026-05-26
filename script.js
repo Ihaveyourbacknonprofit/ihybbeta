@@ -278,3 +278,17 @@ if (footerText) {
     `© ${currentYear} I Have Your Back A Nonprofit Corporation — All Rights Reserved`;
 
 }
+
+const donateBtn = document.getElementById("donateBtn");
+const donateWrapper = document.querySelector(".donate-wrapper");
+
+donateBtn.addEventListener("click", () => {
+  donateWrapper.classList.toggle("active");
+});
+
+// close when clicking outside
+document.addEventListener("click", (e) => {
+  if (!donateWrapper.contains(e.target)) {
+    donateWrapper.classList.remove("active");
+  }
+});
