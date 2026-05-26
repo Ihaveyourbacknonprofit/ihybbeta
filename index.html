@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="logo.png">
 </head>
 
 <body>
@@ -27,17 +28,22 @@
       <img src="logo.png" alt="I Have Your Back nonprofit logo">
       <div class="title">I HAVE YOUR BACK</div>
     </div>
+
+      <button id="themeToggle" class="theme-toggle">
+      🌙
+      </button>
   
     <!-- HAMBURGER ICON (mobile only) -->
-    <div class="hamburger" id="hamburger">
-      ☰
-    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+    ☰
+    </button>
   
     <!-- NAVIGATION -->
     <nav id="nav">
       <a href="#about">About</a>
       <a href="#impact">Impact</a>
       <a href="#contact">Contact</a>
+
     </nav>
   
   </header>
@@ -188,18 +194,37 @@
   </section>
 
 
-  <!-- FOOTER -->
-  <footer>
+<!-- CTA SECTION -->
+<section class="cta-section reveal">
 
-    <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#impact">Impact</a>
-      <a href="#contact">Contact</a>
-    </div>
+  <h2>Ready To Support Our Mission?</h2>
 
-    <p>© 2026 I Have Your Back A Nonprofit Corporation — All Rights Reserved</p>
+  <p>
+    Together we can strengthen communities,
+    support families, and create positive change.
+  </p>
 
-  </footer>
+  <a href="#contact" class="btn">
+    Get In Touch
+  </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#impact">Impact</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <p>
+    © 2026 I Have Your Back A Nonprofit Corporation —
+    All Rights Reserved
+  </p>
+
+</footer>
 
 
   <script src="script.js"></script>
