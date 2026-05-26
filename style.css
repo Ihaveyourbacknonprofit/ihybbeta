@@ -299,11 +299,14 @@ footer {
   color: #c40000;
 }
 
-/* ✅ SAFE ANIMATION SYSTEM (NO MORE INVISIBLE BUGS) */
+/* =========================
+   REVEAL ANIMATIONS
+========================= */
+
 .reveal,
 .fade-up {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 0;
+  transform: translateY(40px);
   transition: all 0.8s ease;
 }
 
@@ -316,7 +319,34 @@ footer {
 /* MOBILE */
 @media (max-width: 900px) {
   nav {
-    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+  
+    flex-direction: column;
+    gap: 18px;
+  
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+  
+    padding: 20px;
+    border-radius: 16px;
+  
+    box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  
+    min-width: 180px;
+  
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+  
+    transition: 0.25s ease;
+  }
+  
+  nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .hero h1 {
@@ -408,7 +438,8 @@ footer {
 
 /* ROTATE ANIMATION WHEN ACTIVE */
 .hamburger.active {
-  transform: rotate(90deg);
+  transform: rotate(180deg) scale(1.1);
+  color: #c40000;
 }
 
 /* =========================
@@ -418,6 +449,19 @@ footer {
 body.dark {
   background: #0f0f0f;
   color: #f1f1f1;
+}
+
+body {
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+body.dark .hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop')
+    center/cover;
 }
 
 /* HEADER */
